@@ -35,7 +35,7 @@ func Load(path string) error {
 		}
 
 		os.Setenv(key, value)
-		log.Printf("YOU HAVE LOADED '%s' VARIABLE", key)
+		log.Printf(green + "YOU HAVE LOADED '%s' VARIABLE" + reset, key)
 	}
 
 	return scanner.Err()
