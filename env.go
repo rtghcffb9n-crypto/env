@@ -10,6 +10,7 @@ import (
 const (
 	red    = "\x1b[31m"
 	yellow = "\x1b[33m"
+	green  = "\x1b[32m"
 	reset  = "\x1b[0m"
 )
 
@@ -34,6 +35,7 @@ func Load(path string) error {
 		}
 
 		os.Setenv(key, value)
+		log.Printf("YOU HAVE LOADED '%s' VARIABLE", key)
 	}
 
 	return scanner.Err()
